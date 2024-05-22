@@ -1,0 +1,42 @@
+
+// Function to display leave requests
+function displayLeaveRequests() {
+    var requestsContainer = document.getElementById('leaveRequests');
+    requestsContainer.innerHTML = ''; // Clear previous requests
+    
+    leaveRequests.forEach(function(request, index) {
+        var requestElement = document.createElement('div');
+        requestElement.classList.add('request');
+        requestElement.innerHTML = `
+            <p><strong>Name:</strong> ${request.name}</p>
+            <p><strong>REGISTER NO:</strong> ${request.regno}</p>
+            <p><strong>DEPARTMENT:</strong> ${request.dpt}</p>
+            <p><strong>YEAR:</strong> ${request.year}</p>
+            <p><strong>PHONE NO:</strong> ${request.phoneno}</p>
+            <p><strong>Leave Type:</strong> ${request.leaveType}</p>
+            <p><strong>Reason:</strong> ${request.reason}</p>
+            <p><strong>Start Date:</strong> ${request.startDate}</p>
+            <p><strong>End Date:</strong> ${request.endDate}</p>
+            <p><strong>Status:</strong> ${request.status}</p>
+            <button type="approve">Approved</button><br>
+            <button type="reject">Rejected</button><br>
+
+              `;
+        requestsContainer.appendChild(requestElement);
+    });
+}
+
+// Function to approve leave
+function approveLeave(index) {
+    leaveRequests[index].status = "APPROVE";
+    displayLeaveRequests();
+}
+
+// Function to reject leave
+function rejectLeave(index) {
+    leaveRequests[index].status = "REJECT";
+    displayLeaveRequests();
+}
+
+// Initial display of leave requests
+displayLeaveRequests();

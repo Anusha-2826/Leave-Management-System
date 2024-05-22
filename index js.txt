@@ -1,0 +1,73 @@
+var leaveRequests = [];
+
+// Function to add a new leave request
+function addLeaveRequest(name, leaveType, reason, startDate, endDate) {
+    var request = {
+        name: name,
+        leaveType: leaveType,
+        reason:reason,
+        startDate: startDate,
+        endDate: endDate,
+        status: "Pending" // Initial status is pending
+    };
+    leaveRequests.push(request);
+}
+
+// Function to display leave requests
+function displayLeaveRequests() {
+    var requestsContainer = document.getElementById('leaveRequests');
+    requestsContainer.innerHTML = ''; // Clear previous requests
+    
+    leaveRequests.forEach(function(request, index) {
+        var requestElement = document.createElement('div');
+        requestElement.classList.add('request');
+        requestElement.innerHTML = `
+            <p><strong>Name:</strong> ${request.name}</p>
+            <p><strong>Leave Type:</strong> ${request.leaveType}</p>
+            <p><strong>Reason:</strong> ${request.reason}</p>
+            <p><strong>Start Date:</strong> ${request.startDate}</p>
+            <p><strong>End Date:</strong> ${request.endDate}</p>
+            <p><strong>Status:</strong> ${request.status}</p>
+            <button onclick="approveLeave(${index})">Approve</button>
+            <button onclick="rejectLeave(${index})">Reject</button>
+        `;
+        requestsContainer.appendChild(requestElement);
+    });
+}
+
+// Function to approve leave
+function approveLeave(index) {
+    leaveRequests[index].status = "Approved";
+    displayLeaveRequests();
+}
+
+// Function to reject leave
+function rejectLeave(index) {
+    leaveRequests[index].status = "Rejected";
+    displayLeaveRequests();
+}
+
+// Event listener for form submission
+document.getElementById('leaveForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+    
+    // Get form values
+    var name = document.getElementById('name').value;
+    var leaveType = document.getElementById('leaveType').value;
+    var reason= document.getElementById('reason').value;
+    var startDate = document.getElementById('startDate').value;
+    var endDate = document.getElementById('endDate').value;
+    
+    // Add the leave request
+    addLeaveRequest(name, leaveType,reason, startDate, endDate);
+    
+    // Display the leave requests
+    displayLeaveRequests();
+    
+    // Reset form fields
+    document.getElementById('name').value = '';
+    document.getElementById('leaveType').value = 'sick';
+    document.getElementById('reason').value = '';    
+    document.getElementById('startDate').value = '';
+    document.getElementById('endDate').value = '';
+});

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body style="background-color: rgb(16, 145, 214);" class="bg">
+    <img src="clg.jpg" class="image">
+    <center>
+        <h1>LOGIN PAGE</h1>
+        <fieldset class="field">
+            <legend>LOGIN</legend>
+            <div class="ab">
+                <form id="loginForm">
+                    <label for="username">USERNAME:</label>
+                    <input type="text" placeholder="Username" required id="username" class="username"><br><br>
+                    <label for="password">PASSWORD:</label>
+                    <input type="password" placeholder="Password" required id="password" class="password"><br><br>
+                    <button type="submit" class="submit">Submit</button><br><br>
+                    <form action="home.html"></form>
+                    <button type="reset" class="reset">Reset</button><br><br>
+                </form>
+            </div>
+        </fieldset>
+    </center>
+    
+</body>
+</html>

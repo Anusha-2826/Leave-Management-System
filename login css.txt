@@ -1,0 +1,50 @@
+body {
+    background-image: initial;
+  }
+  .a{
+      font-size: xx-large;
+      font-style: oblique;
+      margin-left: 650px;
+      margin-right:center;
+      }
+  .field
+  {   margin-top: 100px;
+      height: 210px;
+      border-width: 10px;
+      width:300px;
+      border-color:brown;
+      border-radius: 20px;
+  }
+  .password,.username{
+      height:20px;
+  }
+  .password:hover,.username:hover{
+      background-color: rgb(73, 107, 144);
+      font-style: oblique;
+      
+  }
+  .image {  
+      display: flex;
+      border-radius:10px;
+      margin-left: center;
+      margin-right:center;
+      width: 100%;
+      height: auto;
+  }
+  button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+  .submit:hover,.reset:hover{
+      background-color:rgb(26, 23, 177);
+      border-radius: 20px;
+      font-style: oblique;
+      margin-top: 5px;
+      transition: all 0.2s;
+  }

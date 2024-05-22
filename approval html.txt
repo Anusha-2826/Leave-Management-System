@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Approval Page</title>
+    <link rel="stylesheet" href="astyles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Leave Approval Page</h1>
+        <div id="leaveRequests">
+            <!-- Leave requests will be displayed here -->
+        </div>
+        <button type="approve" class="approve">APPROVE</button><br><br>
+        <button type="reject" class="reject">REJECT</button><br><br>
+
+    </div>
+
+    <script src="ascripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave System</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <div class="ece">
+        <h1>LEAVE MANAGEMENT SYSTEM</h1>
+    
+    <div class="dpt">
+        <div class="bc">
+            <a href="home.html">home</a>
+        </div>
+      
+
+        <div class="cd">
+            <a href="login.html">login</a>
+        </div>
+    </div>
+    </div>
+    </div>
+    <img src="mkce.jpg" class="image">
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color:yellow;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.request {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.approve {
+    background-color: #4cd850;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+}.approve:hover{
+    margin-top: 4px;
+    background-color: #134514;
+}
+
+.reject {
+    background-color: #cb443a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+}.reject:hover{
+    margin-top: 4px;
+    background-color: #610506;
+}

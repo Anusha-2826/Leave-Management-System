@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Management System</title>
+    <link rel="stylesheet" href="indexstyle.css">
+</head>
+<body>
+    <img src="mkce.jpg" class="image">
+
+    <div class="container">
+        <fieldset class="field">
+        <h1>Leave Management System</h1>
+        <form id="leaveForm">
+            <label for="name">NAME:</label>
+            <input type="text" id="name" name="name" class="name"><br><br>
+            <label for="regno">REGISTER NO:</label>
+            <input type="text" id="regno" name="regno" class="name"><br><br>
+            <label for="dpt">DEPARTMENT:</label>
+            <select id="dpt" name="dpt"class="dpt">
+                <option value="ece">ECE</option>
+                <option value="eee">EEE</option>
+                <option value="cse">CSE</option>
+                <option value="it">IT</option>
+                <option value="csbs">CSBS</option>
+                <option value="aids">AIDS</option>
+                <option value="aiml">AIML/option>
+                <option value="civil">CIVIL</option>
+                <option value="mech">MECH</option>
+            </select><br><br>
+            <label for="year">YEAR:</label>
+            <select id="year" name="year"class="year">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>   
+            </select><br><br>        
+            <label for="phoneno">PHONE NO:</label>
+            <input type="text" id="phoneno" name="phoneno" class="phoneno"><br><br>            
+            <label for="leaveType">LEAVE TYPE:</label>
+            <select id="leaveType" name="leaveType"class="leaveType">
+                <option value="sick">Sick Leave</option>
+                <option value="personal">Personal Issue</option>
+            </select><br><br>
+            <label for="reason">REASON FOR LEAVE:</label>
+            <input type="text" id="reason" name="reason" class="reason">
+            <label for="startDate">START DATE:</label>
+            <input type="date" id="startDate" name="startDate" class="startDate"><br><br>
+            
+            <label for="endDate">END DATE:</label>
+            <input type="date" id="endDate" name="endDate" class="endDate"><br><br>
+            
+            <button type="submit">SUBMIT</button>
+            <button type="reset" >RESET</button>
+
+        </form>
+
+        <div id="leaveRequests">
+            <!-- Leave requests will be displayed here -->
+        </div>
+    </div>
+</fieldset>
+
+    <script src="script.js"></script>
+</fieldset>
+
+</body>
+</html>
